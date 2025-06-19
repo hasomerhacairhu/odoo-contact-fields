@@ -107,7 +107,8 @@ class ResPartner(models.Model):
     
     BirthDate = fields.Date(string='Date of Birth')
     
-    Age = fields.Integer(string='Age', compute='_compute_age', 
+    Age = fields.Integer(string='Age', 
+        compute='_compute_age', 
         store=True)
     @api.depends('BirthDate')
     def _compute_age(self):

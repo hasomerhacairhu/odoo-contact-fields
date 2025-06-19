@@ -8,6 +8,7 @@
     'license': 'LGPL-3',
     'depends': ['base'],
     'data': ['security/ir.model.access.csv', 
+             'data/ir_cron_update_next_birthday.xml',
              'views/res_partner_view.xml'],
     'post_init_hook': 'load_stakeholder_options',
     'installable': True,
