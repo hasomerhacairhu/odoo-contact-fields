@@ -23,19 +23,16 @@
         
         <!-- Insert left-column fields -->
         <xpath expr="//field[@name='vat']" position="replace">
-          <group>
             <field name="IDNumber"/>
             <field name="SSN"/>
             <field name="TaxID"/>
             <field name="PassportNumber"/>
             <field name="PassportExpirationDate"/>
             <field name="BankAccountNumber"/>
-          </group>
         </xpath>
 
         <!-- Insert right-column fields -->
         <xpath expr="//field[@name='category_id']" position="replace">
-          <group>
             <field name="title"/>
             <field name="phone"/>
             <field name="email"/>
@@ -54,11 +51,7 @@
             <field name="EntryDate"/>
             <field name="ExitDate"/>
             <field name="ExitReason" invisible="not ExitDate"/>
-          <group>
         </xpath>
-
-
-
       </field>
     </record>
   </data>
