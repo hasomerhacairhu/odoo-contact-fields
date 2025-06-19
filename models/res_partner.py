@@ -124,7 +124,7 @@ class ResPartner(models.Model):
 
     NextBirthday = fields.Date(string='Next Birthday',
         compute='_compute_next_birthday',
-        store=True,
+        #store=True,
         help="Shows the next upcoming birthday, based on the Birthday field.")
     @api.depends('BirthDate')
     def _compute_next_birthday(self):
