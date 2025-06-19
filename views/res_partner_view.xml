@@ -35,6 +35,7 @@
 
         <!-- Insert right-column fields -->
         <xpath expr="//field[@name='category_id']" position="replace">
+          <group>
             <field name="title"/>
             <field name="phone"/>
             <field name="email"/>
@@ -53,6 +54,7 @@
             <field name="EntryDate"/>
             <field name="ExitDate"/>
             <field name="ExitReason" invisible="not ExitDate"/>
+          <group>
         </xpath>
 
 
