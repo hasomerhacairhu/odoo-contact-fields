@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="view_partner_form_inherit_custom_fields" model="ir.ui.view">
+      <field name="name">res.partner.form.inherit.custom.fields</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+
+        <!-- Remove these fields from the base view -->
+	      <xpath expr="//group[field[@name='phone'] 
+          or field[@name='email'] or field[@name='website'] 
+          or field[@name='title'] or field[@name='function']]" 
+          position="replace">
+          <group>
+          <field name="category_id"/>
+          </group>
+        </xpath>
+        <!--
+          NOTE: We're *not* removing 'vat' or 'category_id' here because
+          the code below references them.
+        -->
+        
+        <!-- Insert left-column fields -->
+        <xpath expr="//field[@name='vat']" position="replace">
+          <group>
+            <field name="IDNumber"/>
+            <field name="SSN"/>
+            <field name="TaxID"/>
+            <field name="PassportNumber"/>
+            <field name="PassportExpirationDate"/>
+            <field name="BankAccountNumber"/>
+          </group>
+        </xpath>
+
+        <!-- Insert right-column fields -->
+        <xpath expr="//field[@name='category_id']" position="replace">
+          <group>
+            <field name="title"/>
+            <field name="phone"/>
+            <field name="email"/>
+            <field name="website"/>
+            <field name="Nickname"/>
+            <field name="PlaceOfBirth"/>
+            <field name="BirthDate"/>
+            <field name="NextBirthday" readonly="1"/>
+            <field name="Age" readonly="1"/>
+            <field name="MembershipLevel"/>
+            <field name="StakeholderGroup" widget="many2many_tags"/>
+            <field name="TShirtSize"/>
+            <field name="IsActive"/>
+            <field name="IsVaccinated"/>
+            <field name="MadrichTraining"/>
+            <field name="EntryDate"/>
+            <field name="ExitDate"/>
+            <field name="ExitReason" invisible="not ExitDate"/>
+          </group>
+        </xpath>
+
+        <xpath expr="//field[@name='IDNumber']" position="attributes">
+            <attribute name="style">width: 200px;</attribute>
+        </xpath>
+        <xpath expr="//field[@name='SSN']" position="attributes">
+            <attribute name="style">width: 200px;</attribute>
+        </xpath>
+        <xpath expr="//field[@name='TaxID']" position="attributes">
+            <attribute name="style">width: 200px;</attribute>
+        </xpath>
+        <xpath expr="//field[@name='PassportNumber']" position="attributes">
+            <attribute name="style">width: 200px;</attribute>
+        </xpath>
+        <xpath expr="//field[@name='BankAccountNumber']" position="attributes">
+            <attribute name="style">width: 200px;</attribute>
+        </xpath>
+        <xpath expr="//field[@name='email']" position="attributes">
+            <attribute name="style">width: 200px;</attribute>
+        </xpath>
+        <xpath expr="//field[@name='website']" position="attributes">
+            <attribute name="style">width: 200px;</attribute>
+        </xpath>
+        <xpath expr="//field[@name='phone']" position="attributes">
+            <attribute name="style">width: 200px;</attribute>
+        </xpath>
+        <xpath expr="//field[@name='StakeholderGroup']" position="attributes">
+            <attribute name="style">width: 200px;</attribute>
+        </xpath>
+
+      </field>
+    </record>
+  </data>
+</odoo>
