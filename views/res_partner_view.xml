@@ -55,34 +55,7 @@
             <field name="ExitReason" invisible="not ExitDate"/>
         </xpath>
 
-        <!-- Az eredeti Odoo űrlap mezői általában nem használnak explicit szélességet, hanem a "o_input" vagy "o_field_widget" class-okat, így a mező automatikusan kitölti a rendelkezésre álló helyet. Ha reszponzív mezőt szeretnél, egyszerűen ne adj meg "style" attribútumot, vagy használd a class="o_input" vagy class="o_field_widget" attribútumot:
-        <xpath expr="//field[@name='IDNumber']" position="attributes">
-            <attribute name="class">o_input</attribute>
-        </xpath>
-        <xpath expr="//field[@name='SSN']" position="attributes">
-            <attribute name="style">width: 200px;</attribute>
-        </xpath>
-        <xpath expr="//field[@name='TaxID']" position="attributes">
-            <attribute name="style">width: 200px;</attribute>
-        </xpath>
-        <xpath expr="//field[@name='PassportNumber']" position="attributes">
-            <attribute name="style">width: 200px;</attribute>
-        </xpath>
-        <xpath expr="//field[@name='BankAccountNumber']" position="attributes">
-            <attribute name="style">width: 200px;</attribute>
-        </xpath>
-        <xpath expr="//field[@name='email']" position="attributes">
-            <attribute name="style">width: 200px;</attribute>
-        </xpath>
-        <xpath expr="//field[@name='website']" position="attributes">
-            <attribute name="style">width: 200px;</attribute>
-        </xpath>
-        <xpath expr="//field[@name='phone']" position="attributes">
-            <attribute name="style">width: 200px;</attribute>
-        </xpath>
-        <xpath expr="//field[@name='StakeholderGroup']" position="attributes">
-            <attribute name="class">o_input</attribute>
-        </xpath> -->
+
 
       </field>
     </record>
