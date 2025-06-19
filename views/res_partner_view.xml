@@ -57,8 +57,9 @@
           </group>
         </xpath>
 
+        <!-- Az eredeti Odoo űrlap mezői általában nem használnak explicit szélességet, hanem a "o_input" vagy "o_field_widget" class-okat, így a mező automatikusan kitölti a rendelkezésre álló helyet. Ha reszponzív mezőt szeretnél, egyszerűen ne adj meg "style" attribútumot, vagy használd a class="o_input" vagy class="o_field_widget" attribútumot: -->
         <xpath expr="//field[@name='IDNumber']" position="attributes">
-            <attribute name="style">width: 200px;</attribute>
+            <attribute name="class">o_input</attribute>
         </xpath>
         <xpath expr="//field[@name='SSN']" position="attributes">
             <attribute name="style">width: 200px;</attribute>
@@ -82,7 +83,7 @@
             <attribute name="style">width: 200px;</attribute>
         </xpath>
         <xpath expr="//field[@name='StakeholderGroup']" position="attributes">
-            <attribute name="style">width: 200px;</attribute>
+            <attribute name="class">o_input</attribute>
         </xpath>
 
       </field>
