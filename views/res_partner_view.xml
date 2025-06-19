@@ -35,7 +35,6 @@
 
         <!-- Insert right-column fields -->
         <xpath expr="//field[@name='category_id']" position="replace">
-          <group>
             <field name="title"/>
             <field name="phone"/>
             <field name="email"/>
@@ -54,7 +53,6 @@
             <field name="EntryDate"/>
             <field name="ExitDate"/>
             <field name="ExitReason" invisible="not ExitDate"/>
-          </group>
         </xpath>
 
         <!-- Az eredeti Odoo űrlap mezői általában nem használnak explicit szélességet, hanem a "o_input" vagy "o_field_widget" class-okat, így a mező automatikusan kitölti a rendelkezésre álló helyet. Ha reszponzív mezőt szeretnél, egyszerűen ne adj meg "style" attribútumot, vagy használd a class="o_input" vagy class="o_field_widget" attribútumot: -->
